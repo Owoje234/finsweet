@@ -137,8 +137,6 @@ button{
 
 /* right content stlye */
 .main .container .right-image {
-    
-    background-color: blueviolet;
     background-image: url(./Images/Image.png);
     background-position: center;
     background-repeat: no-repeat;
