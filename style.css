@@ -2,73 +2,98 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
 /* header style */
 header {
     width: 80%;
+    background-color: white;
+    /* margin: auto; */
     display: flex;
     justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+    position:fixed ;
+    right: 10%;
+    z-index: 50;
+}
+
+nav {
+    /* width: fit-content; */
+    width: 50%;
+    display: flex;
     align-items: center;
-    margin: auto;
+    justify-content: center;
+    border-right: 1px solid #939191;
+    line-height: 10px;
+
+}
+
+ul {
+    display: flex;
+    column-gap: 25px;
+    cursor: pointer;
+   /* margin-right: 3%; */
+}
+
+ul li {
+    font-size: 12px;
+    list-style: none;
+}
+
+ul li:hover {
+    color: #FF6433;
+    transform:scale(1.1) ;
+    transition: 0.5s;
 }
 
 /* logo style */
-header .logo h1 {
+/* header .logo h1 {
     font-weight: 700;
     font-size: 25px;
     color: #1E1B1B;
     padding-top:  5px; 
     padding-bottom: 5px;
-}
-
-/* nav style */
-nav {
-    display: flex;
-    align-items: center;
-    column-gap: 30px;
-}
-
-/* ul li style */
-nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    color: #1E1B1B;
-    font-size: 12px;
-    column-gap: 18px;
-    padding-right: 20px;
-    border-right: 1px solid #939191;
-    line-height: 20px;
-    padding-left: 4px;
-}
+} */
 
 /* contact style */
 .assistance {
     display: flex;
-    column-gap: 2px;
+    flex-direction: row;
+    width: 20%;
+    gap: 10%;
 }
 
 /* contact img */
 .left-contact, img {
-    height:25px;
-    width: 25px;
-    margin-left: -6px;
-    padding-left: 2px;
+    height:24px;
+    width: 24px;
+    /* margin-right: 4%; */
     padding-top: 2px;
-    
 }
 
-.right-contact p {
-    font-size: 12px;
+.right-contact> p {
+    font-size: 10px;
     color: #1E1B1B;
     line-height: 10px;
-    padding: 3px;
+    padding-top: 6px;
+    cursor: pointer;
+    transition: ease-in-out;
 }
 
-/* main */
+.right-contact> p:hover {
+    transform: scale(1.2);
+    color:#FF6433;
+}
+/* first ssection - main */
+/* .main .container {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+} */
+
 .main {
-    height: 90.4vh;
+    /* height: 90.4vh; */
+    height: 100vh;
     width: 80%;
     margin: auto;
     display: flex;
@@ -77,16 +102,18 @@ nav ul {
     justify-content: center;
  
 }
+
 /* container */
 .main .container {
     height: 80vh;
     width: 100%;
     display: flex;
 }
+
 /* left content sstyling */
-.main .container .left-content {
+.main  .container .left-content {
     height: 80vh;
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,8 +124,8 @@ nav ul {
     margin-bottom: 5%;
 }
 
-.main .container .left-content h1{
-    font-size: 35px;
+.main .container .left-content h1 {
+    font-size: 25px;
     color: #1E1B1B;
     font-family: 'Outfit', sans-serif;
 }
@@ -107,12 +134,20 @@ nav ul {
 button{
     background: #FF6433;
     color: #ffffff;
-    width: 20%;
+    width: 26%;
     padding: 3%;
     margin-bottom: 5%;
+    margin-left: 1%;
     border-radius: 10px;
     font-size: 8px;
     border: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background-color:#a13716;
 }
 
 .text{
@@ -121,18 +156,31 @@ button{
 
 .text1 {
     font-family: 'Outfit', sans-serif;
-    font-size: 10px;
     color: #939191;
     line-height: 16px;
     padding-left: 20px;
+    margin-right: 70%;
+}
+
+.text1 p {
+    font-size: 10px;
 }
 
 .text2 {
     font-family: 'Outfit', sans-serif;
-    font-size: 12px;
     color: #1E1B1B;
     line-height: 16px;
+    margin-right: 26%;
     padding-left: 20px;
+}
+
+.text2 p{
+    font-size: 12px;
+}
+
+.servicefeatures .arrow {
+    display: flex;
+    column-gap: 10px;
 }
 
 /* right content stlye */
@@ -146,7 +194,7 @@ button{
     position: relative;
 }
 
-.main .container .right-image .Service {
+ .container .right-image .Service {
     position: absolute;
     width: 70%;
     height: 50%;
@@ -162,7 +210,432 @@ button{
     bottom: 0;
 }
 
+/* second section */
+.getquote {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #E2E6E9;
 
+}
 
+.getquote .quotecontainer {
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
 
+.container2 {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    column-gap: 10%;
+}
+
+.left {
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carservice {
+    margin-top: -15%;
+    font-size: 22px;
+    color: #1E1B1B;
+}
+
+.convenientservice, .expertmechanic, 
+.transparentpricing {
+    margin-top: 2%;
+    display: flex;
+    column-gap: 6px;
+    font-size: 10px;
+    color: #1E1B1B; 
+}
+
+.convenient p {
+    color: #1E1B1B;
+    font-size: 10px;
+    width: 100%;
+}
+
+.expert p {
+    color: #1E1B1B;
+    font-size: 10px;
+    width: 100%;
+}
+
+.transparent p {
+    color: #1E1B1B;
+    font-size: 10px;
+    width: 100%;
+}
+
+.convenientservice {
+    margin-top: 8%;
+}
+
+.servicefeatures h4 {
+    padding-bottom: 5px;
+}
+
+.icon1, .icon2, .icon3 {
+    padding-bottom: 20px;
+}
+
+.arrow {
+    margin-top: 20px;
+    display: flex;
+    column-gap: 2%;
+}
+
+.arrow p {
+    font-size: 8px;
+    padding-left: 14px;
+}
+
+.arrow img {
+    width: 40px;
+    height: 10px;
+    margin-right: 60%;
+}
+
+ .right {
+    height: 80vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+input{
+    width: 80%;
+    padding: 5px;
+    border: none;
+}
+
+.h3 {
+    font-size: 25px;
+    margin-top: -22%;
+    color: #1E1B1B;
+}
+
+form {
+  margin-top: 5%;
+}
+
+form .btn {
+    margin-top: 5%;
+}
+
+.ent1, .ent2,
+.ent3, .ent4 {
+    margin: 0.5%;
+}
+
+.ent1, .ent2,
+.ent3, .ent4, ::placeholder {
+    color: #1E1B1B;
+    font-size: 12px;
+}
+
+::placeholder{
+    padding-left: 15px;
+}
+
+.carservicequote .btn {
+    margin-top: 5%;
+}
+
+/* third section */
+#thirdsection {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #ffffff;
+}
+
+.thirdsection-container {
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h2 {
+    margin-top: 15%;
+    font-size: 25px;
+    color: #1E1B1B;
+    /* font-weight: 800; */
+}
+
+.sometext {
+    margin-top: 3%;
+}
+
+.sometext> p {
+    font-size: 10px;
+    color: #1E1B1B;
+    width: 70%;
+}
+
+.left .btn {
+    margin-top: 5%;
+}
+
+.right .getaquote {
+    margin-top: 2%;
+    display: flex;
+    column-gap: 6px;
+    font-size: 15px;
+   color: #1E1B1B; 
+}
+
+.right .getaquote p {
+    padding-top: 5px;
+    margin-right: 2%;
+    color: #1E1B1B;
+    font-size: 10px;
+    width: 90%;
+    text-align: left;
+}
+
+.right .getaquote .icon4, 
+.icon5, .icon6  {
+    padding-bottom: 10px;
+}
+
+.getaquote .icon4, .icon5, .icon6 {
+    padding-bottom: 10px ;
+}
+
+.left-line {
+    margin-top: 2%;
+    display: flex;
+    column-gap: 6px;
+    font-size: 15px;
+    color: #1E1B1B; 
+}
+
+/* fourth section */
+
+#fourthsection {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #F2F2F2;
+}
+
+.fourth-container {
+    height: 90.4vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#fourthsection .content {
+    width: 100%;
+    text-align: center;
+}
+
+#fourthsection .content 
+.what-we-offer-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+}
+
+#fourthsection .content 
+.what-we-offer-card .card {
+    background-color: white; 
+    height: 100px;
+    width: 150px;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}
+
+#fourthsection .content 
+.what-we-offer-card .card:hover {
+    background-color: #FF6433;
+    transform: scale(1.1);
+}
+
+#fourthsection .content 
+.what-we-offer-card 
+.card3 {
+    padding-top: 3%;
+}
+
+#fourthsection .content 
+.what-we-offer-card 
+.card3 {
+    height: 100px;
+    width: 150px;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+    background-color: #FF6433;
+}
+
+#fourthsection .content 
+.what-we-offer-card 
+.card3:hover {
+    transform: scale(1.1); 
+}
+
+.content .offer, h6 {
+    font-size: 12px;
+    padding-bottom:3px
+}
+
+.content .auto {
+    width: 70%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.content .auto> h1 {
+    width: 70%;
+    font-size: 30px;
+    justify-content: center;
+    align-content: center; 
+    
+}
+
+.card, i {
+    height: 30px;
+    width: 30px;
+    padding-top: 3%;
+    justify-items: center;
+    align-items: center;
+}
+
+.card, p {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 14px;
+}
+
+.content .arrow {
+    width: 37%;
+    position: absolute;
+}
+
+.content .arrow, image {
+    right: -0%;
+}
+
+/* Fifth-section */
+#fifth-section {
+height: 70vh;
+width: 100%;
+background-color: #F2F2F2;
+}
+
+#fifth-section .first-row {
+    height: 75%;
+    width: 100%;
+    display: flex;
+}
+
+#fifth-section .first-row .left-car {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('./Images/Image\ 1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#fifth-section .first-row 
+.left-car .left-car-card {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #FF6433;
+}
+
+#fifth-section .first-row 
+.left-car .left-car-card 
+.car-content> h1 {
+    font-size: 20px;
+}
+ 
+#fifth-section .first-row 
+.left-car .left-car-card 
+.car-content .btn5> button {
+    background-color: #1E1B1B;
+    color:#ffffff;
+    margin-top: 5%;
+    border-radius: 8%;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}
+
+#fifth-section .first-row 
+.left-car .left-car-card 
+.car-content .btn5> button:hover {
+    background-color: #311169;
+    transform: scale(1.1);
+}
+ 
+
+#fifth-section .first-row .right-car {
+    width: 50%;
+    height: 100%;
+    background-image: url('./Images/ovGrEUgrkyE.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#fifth-section .second-row {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fifth-section .second-row 
+.fifthsection-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fifth-section .second-row 
+.fifthsection-container h1 {
+    font-size: 25px;
+    color:#661CE7;
+    padding-bottom: 5px;
+}
+
+#fifth-section .second-row 
+.fifthsection-container .p> p {
+    font-size: 2px;
+    width: 100%;
+    font-size: 12px;
+}
 
